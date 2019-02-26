@@ -1,0 +1,7 @@
+{
+  "name": "ibmtest",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
