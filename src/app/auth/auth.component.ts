@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AndroidFingerprintAuth } from '@ionic-native/android-fingerprint-auth/ngx';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
-import {Router} from "@angular/router";
-import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import * as firebase from 'firebase';
+
 
 @Component({
   selector: 'app-auth',
@@ -42,5 +43,6 @@ export class AuthComponent implements OnInit {
     .catch(error => console.error(error));
 
   }
-
+  
+  
 }

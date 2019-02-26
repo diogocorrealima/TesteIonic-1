@@ -12,14 +12,26 @@ import { ThemeService } from 'src/theme/theme.service';
 import { AuthComponent } from './auth/auth.component';
 import { FormsModule } from '@angular/forms';
 
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 @NgModule({
   declarations: [AppComponent, AuthComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    FormsModule, 
+    AngularFireModule.initializeApp(environment.firebase),
+  AngularFirestoreModule
+],
   providers: [
     StatusBar,
     SplashScreen,
     ThemeService,
+    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
