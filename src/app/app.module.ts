@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ThemeService } from 'src/theme/theme.service';
 import { AuthComponent } from './auth/auth.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
@@ -23,17 +23,18 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    FormsModule, 
-    AngularFireModule.initializeApp(environment.firebase),
-  AngularFirestoreModule
-],
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.config),
+    AngularFirestoreModule
+  ],
   providers: [
     StatusBar,
     SplashScreen,
     ThemeService,
-    
+
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

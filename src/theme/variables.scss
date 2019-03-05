@@ -75,4 +75,35 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
+ion-item {
+  --background: #221F1F;
+  --color:white;
+}
 
+ion-header > ion-toolbar > ion-title {
+  color:white;
+  background-color:#221F1F;
+}
+
+ion-list{
+  color:white;
+  background-color:#221F1F;
+  }
+  ion-label{
+    color:white;
+    background-color:#221F1F;
+    }
+
+ion-list > ion-item{
+    color:white;
+    background-color:#221F1F;
+}
+ion-card > ion-card-header > ion-card-title {
+  color:white;
+}
+ion-content {
+  --ion-color-primary:red;
+  --background:#221F1F;
+  --color:white;
+  --padding-top: 10%;
+}

@@ -1,4 +1,25 @@
-body {
-    color:white;
-    background-color:#141414 !important;
-  }
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+
+
+.pageblack {
+  --ion-color-primary:red;
+  color:white;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  contain: layout size style;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #221F1F;
+}
+
+
