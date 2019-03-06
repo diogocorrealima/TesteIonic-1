@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
-  private userForm: FormGroup;
-
+  userForm: FormGroup;
+  hasErrorRegister: Boolean = false;
   constructor(private accountService: AccountService, private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit() {
@@ -21,7 +21,15 @@ export class UserComponent implements OnInit {
     });
   }
   register() {
-    this.accountService.createUser(this.userForm.value);
+    this.accountService.createUser(this.userForm.value)
+      .then(result => {
+        this.hasErrorRegister = false;
+        this.router.navigate(['/']);
+      })
+      .catch(error => {
+        this.hasErrorRegister = true;
+        this.router.navigate(['/']);
+      });
   }
 
 }

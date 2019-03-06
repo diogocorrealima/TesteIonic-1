@@ -23,9 +23,9 @@ const themes = {
   styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent implements OnInit {
-  private userForm: FormGroup;
+  userForm: FormGroup;
   private loginError: Boolean = false;
-  logoPath: String = '../../../resources/netflix_logo.png';
+  logoPath: String = 'assets/icon.png';
   constructor(private accountService: AccountService, private formBuilder: FormBuilder, private router: Router, private theme: ThemeService) { }
 
   ngOnInit() {
@@ -41,7 +41,7 @@ export class AuthComponent implements OnInit {
     this.theme.setTheme(themes[name]);
   }
   login() {
-    var result = this.accountService.login(this.userForm.value)
+   this.accountService.login(this.userForm.value)
       .then(result => {
         this.loginError = result != null;
         this.router.navigate(['/tabs/tab1']);

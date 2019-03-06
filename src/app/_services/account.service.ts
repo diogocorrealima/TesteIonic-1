@@ -10,16 +10,13 @@ export class AccountService {
 
   constructor(private faio: FingerprintAIO, private router: Router) { }
 
-  createUser(user: User) {
-    firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-      .catch(function (error) {
-        console.error(error);
-      });
+  createUser(user: User): Promise<firebase.auth.UserCredential> {
+    return firebase.auth().createUserWithEmailAndPassword(user.email, user.password);
   }
 
   login(user: User): Promise<firebase.auth.UserCredential> {
     return firebase.auth().signInWithEmailAndPassword(user.email, user.password);
-     
+
   }
   loginWithFingerprint(user: User) {
     if (user.email) {
