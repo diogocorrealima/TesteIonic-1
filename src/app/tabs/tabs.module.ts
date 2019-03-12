@@ -1,3 +1,4 @@
+import { MoviedbService } from './../_services/moviedb.service';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs.router.module';
 
 import { TabsPage } from './tabs.page';
+import { RequestService } from '../_services/request.service';
 
 @NgModule({
   imports: [
@@ -14,6 +16,7 @@ import { TabsPage } from './tabs.page';
     FormsModule,
     TabsPageRoutingModule
   ],
+  providers: [RequestService, MoviedbService],
   declarations: [TabsPage]
 })
 export class TabsPageModule {}
