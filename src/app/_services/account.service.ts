@@ -65,7 +65,7 @@ export class AccountService {
     //     if (result.isAvailable) {
     //       // it is available
 
-    //       this.androidFingerprintAuth.encrypt({ clientId: 'ibmtest', username: 'ibmtest', password: 'ibmtest' })
+    //       this.androidFingerprintAuth.encrypt({ clientId: 'testeionic', username: 'testeionic', password: 'testeionic' })
     //         .then(result => {
     //           if (result.withFingerprint) {
     //             console.log('Successfully encrypted credentials.');
