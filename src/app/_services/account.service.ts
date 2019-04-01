@@ -19,7 +19,7 @@ export class AccountService {
 
   }
   loginWithFingerprint(user: User) {
-    if (user.email) {
+    if (!user.email) {
       console.log("Please enter Username!");
       return;
     }
@@ -38,7 +38,7 @@ export class AccountService {
               localizedReason: 'Please Authenticate' //Only for iOS
             })
               .then((result: any) => {
-                if (result == "Success") {
+                if (result.withFingerprint) {
                   this.router.navigate(['/tabs/tab1']);
 
                 }

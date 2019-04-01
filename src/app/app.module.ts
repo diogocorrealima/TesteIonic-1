@@ -18,8 +18,9 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
+
 @NgModule({
-  declarations: [AppComponent, AuthComponent,UserComponent],
+  declarations: [AppComponent, AuthComponent, UserComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -34,8 +35,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     StatusBar,
     SplashScreen,
     ThemeService,
-
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent]
 })

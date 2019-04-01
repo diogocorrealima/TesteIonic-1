@@ -31,17 +31,19 @@ export class AuthComponent implements OnInit {
   ngOnInit() {
     // this.changeTheme('night');
     this.userForm = this.formBuilder.group({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required]),
+      email: new FormControl('diogo.correa.lima@gmail.com', [Validators.required, Validators.email]),
+      password: new FormControl('Asd@123', [Validators.required]),
     });
 
-
+    if (true) {
+      this.login();
+    }
   }
   changeTheme(name) {
     this.theme.setTheme(themes[name]);
   }
   login() {
-   this.accountService.login(this.userForm.value)
+    this.accountService.login(this.userForm.value)
       .then(result => {
         this.loginError = result != null;
         this.router.navigate(['/tabs/tab1']);

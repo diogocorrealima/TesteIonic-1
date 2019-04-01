@@ -23,8 +23,6 @@ export class RequestService {
     });
   }
 
-  
-
   complete(observer, next) {
     observer.next(next);
     observer.complete();

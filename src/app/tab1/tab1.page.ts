@@ -20,7 +20,8 @@ export class Tab1Page implements OnInit {
 
   getMovies() {
     return this.movieDbService.get().subscribe(movies => {
-      this.movieList = movies;
+      this.movieList = movies.items;
+      console.log(this.movieList);
     });
   }
 }
