@@ -1,5 +1,6 @@
 import { MoviedbService } from './../_services/moviedb.service';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tab1',
@@ -11,6 +12,7 @@ export class Tab1Page implements OnInit {
     effect: 'flip'
   };
   movieList: any[];
+  urlBaseImage: String = `${environment.moviedb.urlBaseImage}`;
   constructor(private movieDbService: MoviedbService) {
 
   }

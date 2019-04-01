@@ -16,6 +16,7 @@ export const environment = {
     apiKey:'efffb211dba4b2efb0adfa63860fa002',
     apiToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZmZmYjIxMWRiYTRiMmVmYjBhZGZhNjM4NjBmYTAwMiIsInN1YiI6IjVjODcwZjQ0OTI1MTQxMjc2MzI0YjhiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cAsC1iUW8RpRLC-2MUzS0G1rDMZK21WMVoDtyfRFUbI',
     urlBase: 'https://api.themoviedb.org/3',
+    urlBaseImage : 'https://image.tmdb.org/t/p/w600_and_h900_bestv2',
     list: 107273
 
   }
