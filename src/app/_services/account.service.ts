@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import * as firebase from "firebase";
 import { Router } from '@angular/router';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
-import { Observable } from 'rx-lite-aggregates';
+import { User } from '../_models/user';
 @Injectable({
   providedIn: 'root'
 })
@@ -39,7 +39,7 @@ export class AccountService {
             })
               .then((result: any) => {
                 if (result.withFingerprint) {
-                  this.router.navigate(['/tabs/tab1']);
+                  this.router.navigate(['/tabs/tab-home']);
 
                 }
                 else {
@@ -70,7 +70,7 @@ export class AccountService {
     //           if (result.withFingerprint) {
     //             console.log('Successfully encrypted credentials.');
     //             console.log('Encrypted credentials: ' + result.token);
-    //             this.router.navigate(['/tabs/tab1']);
+    //             this.router.navigate(['/tabs/tab-home']);
     //           } else if (result.withBackup) {
     //             console.log('Successfully authenticated with backup password!');
     //           } else console.log('Didn\'t authenticate!');

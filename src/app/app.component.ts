@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   initializeApp() {
-
+    this.splashScreen.show();
     firebase.initializeApp(environment.config);
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();

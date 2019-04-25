@@ -4,20 +4,22 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab1Page } from './tab1.page';
+import { TabHomePage } from './tab-home.page';
 import { MoviedbService } from '../_services/moviedb.service';
 import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
+import { MylistComponent } from './mylist/mylist.component';
+import { ReleaselistComponent } from './releaselist/releaselist.component';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab1Page }]),
-    HttpClientModule 
+    RouterModule.forChild([{ path: '', component: TabHomePage }]),
+    HttpClientModule
     
   ],
-  declarations: [Tab1Page],
+  declarations: [TabHomePage, MylistComponent, ReleaselistComponent],
   providers: [RequestService, MoviedbService]
 })
-export class Tab1PageModule { }
+export class TabHomePageModule { }

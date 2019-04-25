@@ -1,7 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { routerNgProbeToken } from '@angular/router/src/router_module';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import * as firebase from 'firebase';
 import { AccountService } from '../_services/account.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { ThemeService } from 'src/theme/theme.service';
@@ -46,7 +44,7 @@ export class AuthComponent implements OnInit {
     this.accountService.login(this.userForm.value)
       .then(result => {
         this.loginError = result != null;
-        this.router.navigate(['/tabs/tab1']);
+        this.router.navigate(['/tabs/tab-home']);
       })
       .catch(error => {
         this.loginError = true;

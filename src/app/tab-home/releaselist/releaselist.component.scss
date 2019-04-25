@@ -1,0 +1,33 @@
+.headerChipGray{
+    ion-chip.chip.chip-md{
+        margin: 2px 2px 2px 2px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        background: white;
+    }
+    ion-chip.chip.chip-ios{
+        margin: 2px 2px 2px 2px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        background: white;
+    }
+}
+
+.headerChipGreen{
+
+    ion-chip.chip.chip-md{
+        margin: 2px 2px 2px 2px;
+        border-radius: 10px;
+        background: white;
+        color: #A80C50;
+        border: 1px solid #A80C50;
+    }
+
+    ion-chip.chip.chip-ios{
+        margin: 2px 2px 2px 2px;
+        border-radius: 10px;
+        background: white;
+        color: #A80C50;
+        border: 1px solid #A80C50;
+    }
+}

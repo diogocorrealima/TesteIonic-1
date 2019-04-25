@@ -1,0 +1,22 @@
+<ion-toolbar>
+  <ion-title>Lançamentos</ion-title>
+</ion-toolbar>
+<ion-slides pager="true" [options]="slideOpts" [scrollbar]="false" >
+  <ion-slide *ngFor="let item of numberOfSlldes">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-50 *ngFor="let item of movies">
+            <ion-button  size="small" shape="round" (click)="setFavorite(item)">
+                <ion-icon name="{{item?.favorite ? 'star' : 'star-outline'}}"></ion-icon>
+              </ion-button>
+          <div class="card ">
+            <ion-img [src]="urlBaseImage + item.poster_path"></ion-img>
+            <p style="font-size: 14px;">{{item.name}}</p>
+          </div>
+        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-slide>
+
+</ion-slides>

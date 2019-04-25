@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <ion-img [src]="logoPath"></ion-img>
+    </ion-thumbnail>
+    <ion-label>Inicio</ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-content cnpj>
+<app-releaselist [movies]='movies' [wrapMovies]="wrapMovies"></app-releaselist>
+ <app-mylist [movies]='movies'></app-mylist>
+</ion-content>
