@@ -3,17 +3,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { empty, Observable, Subscription, from } from 'rxjs';
 import { environment } from '../../environments/environment';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class RequestService {
-  private subscriptionPathServer: Subscription;
-  private pathServer: string;
+
   public token;
   private headers = { 'Content-Type': 'application/json' };
   private options = { headers: this.headers };
 
-  constructor(protected http: HttpClient) {}
-
-  postBinary(endpoint, body = {}) {}
+  constructor(private http: HttpClient) { }
 
 
   get<T>(endpoint, params?: any): Observable<T> {
