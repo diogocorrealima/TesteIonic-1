@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { FirebaseFirestore } from 'angularfire2';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-releaselist',
@@ -17,6 +19,8 @@ export class ReleaselistComponent implements OnInit {
 
   };
   numberOfSlldes: number[];
+  db: FirebaseFirestore = firebase.firestore();
+
   constructor() { }
 
   ngOnInit() {
@@ -25,9 +29,12 @@ export class ReleaselistComponent implements OnInit {
   setFavorite(movie) {
     if (!movie.favorite) {
       movie.favorite = true;
+      this.db.collection("favoriteMovies").add(movie);
     }
     else {
       movie.favorite = !movie.favorite;
+      this.db.collection("favoriteMovies").add(movie);
+
     }
   }
 }
