@@ -1,7 +1,7 @@
 export class User {
-    constructor(parameters) {
-        
+    constructor() {
+
     }
     email: string;
-    password:string;
+    password: string;
 }

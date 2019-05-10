@@ -2,12 +2,12 @@
     <ion-title>Minha Lista</ion-title>
   </ion-toolbar>
   <ion-slides pager="true" [options]="slideOpts" [scrollbar]="false" >
-    <ion-slide *ngFor="let item of numberOfSlldes">
+    <ion-slide *ngFor="let slide of numberOfSlldes">
       <ion-grid>
         <ion-row>
           <ion-col col-50 *ngFor="let item of movies" >
             <div *ngIf="item?.favorite">
-              <ion-button  size="small" shape="round" (click)="setFavorite(item)">
+              <ion-button  size="small" shape="round" (click)="setFavoriteMovie(item)">
                   <ion-icon name="{{item?.favorite ? 'star' : 'star-outline'}}"></ion-icon>
                 </ion-button>
             <div class="card ">

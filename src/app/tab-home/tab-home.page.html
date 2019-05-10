@@ -8,6 +8,6 @@
 </ion-header>
 
 <ion-content cnpj>
-<app-releaselist [movies]='movies' [wrapMovies]="wrapMovies"></app-releaselist>
- <app-mylist [movies]='favoriteMovies'></app-mylist>
+<app-releaselist [movies]='movies' [wrapMovies]="wrapMovies" (setFavorite)="setFavorite($event)"></app-releaselist>
+ <app-mylist [movies]='favoriteMovies' (setFavorite)="setFavorite($event)"></app-mylist>
 </ion-content>
