@@ -6,7 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 describe('AccountService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers:[FingerprintAIO],
-    imports:[RouterTestingModule]
+    imports: [RouterTestingModule]
   }));
 
   it('should be created', () => {

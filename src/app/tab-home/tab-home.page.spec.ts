@@ -16,7 +16,7 @@ describe('TabHomePage', () => {
       declarations: [TabHomePage],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [RouterTestingModule, HttpClientModule],
-      providers:[RequestService, SplashScreen]
+      providers: [RequestService, SplashScreen]
     }).compileComponents();
   }));
 
@@ -28,5 +28,8 @@ describe('TabHomePage', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('call movies', () => {
+    expect(component.getMovies).toBeTruthy();
   });
 });

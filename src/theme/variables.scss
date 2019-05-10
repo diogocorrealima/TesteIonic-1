@@ -3,6 +3,7 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-font-family:'K2D';
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -107,3 +108,11 @@ ion-header > ion-toolbar {
   --background:#221F1F;
   --color:#f5f5f1;
 }
+
+@font-face {
+  font-family: 'K2D';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/K2D-Bold.ttf');
+}
+

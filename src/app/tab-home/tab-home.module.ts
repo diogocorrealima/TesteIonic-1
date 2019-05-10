@@ -17,7 +17,6 @@ import { ReleaselistComponent } from './releaselist/releaselist.component';
     FormsModule,
     RouterModule.forChild([{ path: '', component: TabHomePage }]),
     HttpClientModule
-    
   ],
   declarations: [TabHomePage, MylistComponent, ReleaselistComponent],
   providers: [RequestService, MoviedbService]
