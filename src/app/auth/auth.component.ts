@@ -24,18 +24,16 @@ export class AuthComponent implements OnInit {
   userForm: FormGroup;
   private loginError: Boolean = false;
   logoPath: String = 'assets/icon.png';
-  constructor(private accountService: AccountService, private formBuilder: FormBuilder, private router: Router, private theme: ThemeService) { }
+  constructor(private accountService: AccountService,
+    private formBuilder: FormBuilder,
+    private router: Router, private theme: ThemeService) { }
 
   ngOnInit() {
     // this.changeTheme('night');
     this.userForm = this.formBuilder.group({
-      email: new FormControl('diogo.correa.lima@gmail.com', [Validators.required, Validators.email]),
-      password: new FormControl('Asd@123', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required]),
     });
-
-    if (true) {
-      this.login();
-    }
   }
   changeTheme(name) {
     this.theme.setTheme(themes[name]);
